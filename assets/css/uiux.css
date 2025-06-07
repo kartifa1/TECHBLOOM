@@ -1,0 +1,61 @@
+
+/* ===== CUSTOM CSS by Hasan ~ TECHBLOOM ===== */
+.modal-box {
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.fade-slide-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-slide-up.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#beforeAfterContainer {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    user-select: none;
+}
+
+#beforeAfterContainer img {
+    width: 100%;
+    border-radius: 1rem;
+    box-shadow: 0 8px 20px rgba(128, 90, 213, 0.7);
+    display: block;
+}
+
+#slider {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    width: 4px;
+    background: #7c3aed;
+    cursor: ew-resize;
+    border-radius: 2px;
+    z-index: 10;
+}
+
+#afterImageWrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 1rem;
+    box-shadow: 0 8px 20px rgba(128, 90, 213, 0.7);
+    width: 50%;
+    transition: width 0.3s ease;
+}

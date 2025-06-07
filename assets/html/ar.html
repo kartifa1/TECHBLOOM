@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="id">
+<!-- TECHBLOOM BY HASAN -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Augmented Reality - Grow The Future With Code</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../css/ar.css">
+</head>
+
+<body class="bg-gradient-to-br from-indigo-900 to-black text-white font-sans relative min-h-screen overflow-x-hidden">
+  <div
+    class="absolute inset-0 z-0 pointer-events-none bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-pink-500 via-black to-transparent opacity-20 blur-2xl animate-pulse">
+  </div>
+
+  <div id="welcome-modal"
+    class="fixed inset-0 bg-black bg-opacity-70 backdrop-blur-sm flex items-center justify-center z-50 hidden">
+    <div
+      class="bg-white text-black p-8 rounded-2xl shadow-2xl max-w-lg w-full text-center transform transition-all scale-90 opacity-0 modal-box">
+      <h2 class="text-2xl font-bold mb-3">Selamat Datang di Dunia AR! </h2>
+      <p class="mb-6">Pelajari teknologi Augmented Reality yang menyatukan pengalaman dunia nyata dengan elemen digital
+        secara interaktif..</p>
+      <button onclick="closeWelcome()"
+        class="bg-pink-700 hover:bg-indigo-800 text-white px-4 py-2 rounded shadow transition">Mulai Sekarang</button>
+    </div>
+  </div>
+
+  <header class="relative z-10 text-center pt-16 px-6">
+    <h1 class="text-4xl md:text-5xl font-extrabold mb-4 text-pink-400">Augmented Reality </h1>
+    <p class="text-lg max-w-xl mx-auto mb-8 text-gray-300">Pelajari teknologi AR yang memadukan dunia nyata dengan
+      elemen virtual untuk menciptakan pengalaman interaktif yang inovatif..</p>
+    <img src="../images/ar-visual.jpg" alt="Augmented Reality"
+      class="w-64 h-auto mx-auto rounded-xl shadow-lg border-4 border-pink-600">
+  </header>
+
+  <section class="relative z-10 max-w-6xl mx-auto px-6 py-12">
+    <h2 class="text-2xl font-bold text-pink-400 mb-6 text-center">Simulasi Interaktif AR</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="bg-pink-700/60 p-6 rounded-xl shadow hover:scale-105 transition cursor-pointer"
+        onclick="showModal('Face Tracking', 'Menampilkan filter virtual, seperti kacamata atau makeup digital, secara real-time menggunakan kamera..')">
+        <h3 class="font-bold text-lg mb-2">Face Tracking</h3>
+        <p>Simulasi filter wajah menggunakan kamera secara real-time.</p>
+      </div>
+      <div class="bg-pink-700/60 p-6 rounded-xl shadow hover:scale-105 transition cursor-pointer"
+        onclick="showModal('AR Navigation', 'Navigasi digital yang menampilkan arah secara real-time, misalnya panah di atas peta..')">
+        <h3 class="font-bold text-lg mb-2">AR Navigation</h3>
+        <p>Petunjuk arah berbasis lokasi virtual untuk navigasi yang mudah..</p>
+      </div>
+      <div class="bg-pink-700/60 p-6 rounded-xl shadow hover:scale-105 transition cursor-pointer"
+        onclick="document.getElementById('placement-box').classList.toggle('hidden')">
+        <h3 class="font-bold text-lg mb-2">Object Placement</h3>
+        <p>Penempatan objek 3D secara interaktif di lingkungan nyata..</p>
+      </div>
+      <div class="bg-pink-700/60 p-6 rounded-xl shadow hover:scale-105 transition cursor-pointer" onclick="startGame()">
+        <h3 class="font-bold text-lg mb-2">Mini Game</h3>
+        <p>Tangkap objek yang bergerak di layar dalam permainan interaktif.</p>
+      </div>
+      <div class="bg-pink-700/60 p-6 rounded-xl shadow hover:scale-105 transition cursor-pointer"
+        onclick="toggleTryOn()">
+        <h3 class="font-bold text-lg mb-2">AR Try-On</h3>
+        <p>Coba aksesori virtual seperti kacamata secara langsung.</p>
+      </div>
+      <div class="bg-pink-700/60 p-6 rounded-xl shadow hover:scale-105 transition cursor-pointer"
+        onclick="showModal('Object Detection', 'Mendeteksi objek nyata seperti tanaman atau barang, kemudian menampilkan informasi digital terkait..')">
+        <h3 class="font-bold text-lg mb-2">Object Detection</h3>
+        <p>Menampilkan informasi secara otomatis berdasarkan objek yang terdeteksi.</p>
+      </div>
+    </div>
+
+    <div id="tryon-area" class="mt-12 hidden text-center">
+      <img src="assets/images/face.png" alt="Wajah Model" class="mx-auto w-40 h-40 rounded-full relative">
+      <img src="assets/images/glasses.png" alt="Kacamata" class="mx-auto -mt-36 w-28 relative">
+      <p class="text-pink-300 mt-2">Kacamata virtual aktif </p>
+    </div>
+
+    <div id="placement-box" class="hidden mt-10 border border-pink-400 p-4 rounded-xl relative bg-pink-100 text-black">
+      <p class="font-semibold mb-2">Letakkan objek 3D di area ini:</p>
+      <div class="grid grid-cols-3 gap-2">
+        <div class="bg-pink-400 p-6 rounded cursor-move">🪑 Kursi</div>
+        <div class="bg-pink-400 p-6 rounded cursor-move">📦 Box</div>
+        <div class="bg-pink-400 p-6 rounded cursor-move">🛋️ Sofa</div>
+      </div>
+    </div>
+  </section>
+
+  <div id="gameTarget"
+    class="fixed w-16 h-16 bg-pink-500 rounded-full shadow-lg text-xl flex items-center justify-center cursor-pointer game-object hidden z-50"
+    onclick="hitTarget()">
+    🎯
+  </div>
+
+  <section class="relative z-10 max-w-6xl mx-auto px-6 py-10">
+    <h2 class="text-2xl font-bold mb-6 text-pink-400">Galeri AR</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+      <img src="../images/ar-object1.jpg" alt="AR Object 1" class="rounded-lg shadow-lg hover:scale-105 transition">
+      <img src="../images/ar-object2.jpg" alt="AR Object 2" class="rounded-lg shadow-lg hover:scale-105 transition">
+      <img src="../images/ar-object3.jpg" alt="AR Object 3" class="rounded-lg shadow-lg hover:scale-105 transition">
+    </div>
+  </section>
+
+  <div id="arModal" class="fixed inset-0 bg-black/70 flex items-center justify-center z-50 hidden">
+    <div class="bg-white text-black max-w-2xl w-full p-6 rounded-xl relative shadow-xl">
+      <button onclick="closeModal()" class="absolute top-2 right-4 text-red-500 text-xl font-bold">&times;</button>
+      <h3 id="modalTitle" class="text-2xl font-bold text-pink-700 mb-4"></h3>
+      <p id="modalContent" class="text-gray-800 leading-relaxed whitespace-pre-line"></p>
+    </div>
+  </div>
+
+  <div class="relative z-10 max-w-6xl mx-auto px-6 py-6 flex justify-center">
+    <a href="../../dashboard.html"
+      class="inline-block bg-purple-700 hover:bg-purple-800 text-white font-semibold px-6 py-3 rounded shadow transition">
+      ← Kembali ke Beranda
+    </a>
+  </div>
+
+
+  <footer class="relative z-10 text-center text-pink-300 py-8 bg-purple-900">
+    <p class="animated-footer-text hover:underline">
+      &copy; 2025 Belajar Augmented Reality oleh
+      <a href="#" aria-label="TechBloom website" class="text-pink-400 hover:text-pink-200">TechBloom</a>. Semua Hak
+      Dilindungi.
+    </p>
+    <p class="text-sm text-indigo-300 mt-1">
+      Didukung oleh teknologi modern dan semangat belajar.
+    </p>
+  </footer>
+  <script src="../js/ar.js"></script>
+
+
+</body>
+
+</html>

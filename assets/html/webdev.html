@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="id">
+<!-- TECHBLOOM BY HASAN -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Belajar Web Development</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/webdev.css">
+</head>
+
+<body class="selection:bg-blue-500 selection:text-white">
+
+
+  <audio id="click-sound" src="../audio/click.mp3" preload="auto"></audio>
+
+
+  <header class="text-center pt-16 pb-12 px-4">
+    <h1 class="font-extrabold text-5xl tracking-wide mb-2 select-none">Belajar Web Development</h1>
+    <p class="text-lg mb-8 text-blue-200/80 max-w-xl mx-auto select-none">
+      Pelajari cara membuat website modern, responsif, dan interaktif dari dasar hingga mahir.
+    </p>
+    <img src="../../assets/images/gambar-webdev.jpg" alt="Gambar Web Development" />
+  </header>
+
+
+  <section class="max-w-5xl mx-auto my-20 px-4 text-center">
+    <h2 class="font-bold text-4xl mb-7 text-blue-300 select-none">Apa itu Web Development?</h2>
+    <p class="text-lg leading-relaxed text-blue-100/90 max-w-4xl mx-auto">
+      <strong>Web Development</strong> adalah proses membangun dan memelihara situs web yang mencakup berbagai aspek,
+      mulai dari struktur halaman menggunakan HTML, desain visual dengan CSS, hingga interaksi dinamis melalui
+      JavaScript. Secara umum, web development terbagi menjadi dua bagian utama: front-end, yaitu tampilan antarmuka
+      yang dilihat dan digunakan oleh pengguna, serta back-end, yaitu bagian yang mengelola proses di balik layar
+      seperti server, database, dan logika aplikasi.
+
+      Tujuan utama dari web development adalah menciptakan situs web yang menarik secara visual, berfungsi dengan baik,
+      dan mudah diakses oleh semua pengguna. Di era digital saat ini, kemampuan dalam pengembangan web menjadi sangat
+      penting, karena hampir seluruh informasi, layanan, dan komunikasi dapat diakses melalui internet.
+      .
+    </p>
+  </section>
+
+  <section class="max-w-7xl mx-auto my-20 px-4">
+    <h2 class="font-bold text-4xl mb-10 text-blue-300 text-center select-none">Modul Belajar WebDev</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-center">
+      <div tabindex="0" role="button" class="card p-6"
+        onclick="showModal('HTML (HyperText Markup Language)', 'HTML adalah dasar dari semua halaman web. Digunakan untuk membuat struktur konten seperti heading, paragraf, tabel, dan gambar. Tanpa HTML, halaman web tidak akan memiliki kerangka atau isi yang bisa dibaca dan ditampilkan oleh browser. HTML bekerja seperti fondasi bangunan meskipun tidak selalu terlihat mencolok, tapi sangat penting karena menentukan bagaimana informasi ditata, dibaca, dan diakses oleh pengguna. Setiap elemen di halaman web, mulai dari teks biasa hingga form input dan video, semuanya ditentukan strukturnya dengan HTML.')"
+        onkeypress="if(event.key==='Enter') showModal('HTML (HyperText Markup Language)', 'HTML adalah dasar dari semua halaman web. Digunakan untuk membuat struktur konten seperti heading, paragraf, tabel, dan gambar. Tanpa HTML, halaman web tidak akan memiliki kerangka atau isi yang bisa dibaca dan ditampilkan oleh browser. HTML bekerja seperti fondasi bangunan meskipun tidak selalu terlihat mencolok, tapi sangat penting karena menentukan bagaimana informasi ditata, dibaca, dan diakses oleh pengguna. Setiap elemen di halaman web, mulai dari teks biasa hingga form input dan video, semuanya ditentukan strukturnya dengan HTML.')">
+        <h5 class="card-title">HTML</h5>
+        <p class="card-text">Pelajari cara membangun struktur dasar halaman web menggunakan berbagai tag dan elemen HTML
+          secara tepat dan terstruktur.
+
+          .</p>
+      </div>
+      <div tabindex="0" role="button" class="card p-6"
+        onclick="showModal('CSS (Cascading Style Sheets)', 'CSS (Cascading Style Sheets) adalah teknologi yang digunakan untuk mengatur tampilan dan gaya visual elemen-elemen HTML pada halaman web. Jika HTML merupakan kerangka dasar, maka CSS berperan sebagai tata dekorasi yang mempercantik tampilan. CSS memungkinkan pengaturan warna, tipografi, jarak, tata letak, animasi, dan responsivitas, sehingga halaman web menjadi lebih menarik dan mudah diakses di berbagai perangkat. Teknologi ini juga mendukung metode modern seperti Flexbox dan Grid untuk tata letak yang fleksibel dan dinamis...')"
+        onkeypress="if(event.key==='Enter') showModal('CSS (Cascading Style Sheets)', 'CSS (Cascading Style Sheets) adalah teknologi yang digunakan untuk mengatur tampilan dan gaya visual elemen-elemen HTML pada halaman web. Jika HTML merupakan kerangka dasar, maka CSS berperan sebagai tata dekorasi yang mempercantik tampilan. CSS memungkinkan pengaturan warna, tipografi, jarak, tata letak, animasi, dan responsivitas, sehingga halaman web menjadi lebih menarik dan mudah diakses di berbagai perangkat. Teknologi ini juga mendukung metode modern seperti Flexbox dan Grid untuk tata letak yang fleksibel dan dinamis...')">
+        <h5 class="card-title">CSS</h5>
+        <p class="card-text">Pelajari cara memperindah tampilan halaman web melalui pengaturan warna, jenis huruf,
+          animasi, dan tata letak yang responsif.
+
+          .</p>
+      </div>
+      <div tabindex="0" role="button" class="card p-6"
+        onclick="showModal('JavaScript', 'JavaScript adalah bahasa pemrograman yang memberikan kemampuan interaktif pada halaman web. Jika HTML dan CSS berfungsi untuk membangun struktur dan mempercantik tampilan, maka JavaScript membuat halaman tersebut menjadi dinamis dan responsif terhadap aksi pengguna. Dengan JavaScript, kita dapat membuat elemen interaktif seperti tombol, popup modal, validasi formulir, animasi dinamis, perubahan konten secara real-time, dan aplikasi web lengkap. JavaScript berjalan langsung di browser pengguna sehingga mampu memberikan respons yang cepat dan lancar...')"
+        onkeypress="if(event.key==='Enter') showModal('JavaScript adalah bahasa pemrograman yang memberikan kemampuan interaktif pada halaman web. Jika HTML dan CSS berfungsi untuk membangun struktur dan mempercantik tampilan, maka JavaScript membuat halaman tersebut menjadi dinamis dan responsif terhadap aksi pengguna. Dengan JavaScript, kita dapat membuat elemen interaktif seperti tombol, popup modal, validasi formulir, animasi dinamis, perubahan konten secara real-time, dan aplikasi web lengkap. JavaScript berjalan langsung di browser pengguna sehingga mampu memberikan respons yang cepat dan lancar..')">
+        <h5 class="card-title">JavaScript</h5>
+        <p class="card-text">Pelajari cara membangun interaktivitas dan dinamika pada halaman web menggunakan bahasa
+          pemrograman JavaScript di sisi klien (client-side)..</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="max-w-5xl mx-auto my-20 px-4 text-left space-y-12">
+    <div>
+      <h3 class="font-semibold text-3xl mb-4 text-blue-200 select-none">Contoh Struktur HTML Dasar</h3>
+      <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="id"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Contoh Halaman&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Selamat Datang&lt;/h1&gt;
+    &lt;p&gt;Ini contoh halaman web sederhana.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+
+    <div>
+      <h3 class="font-semibold text-3xl mb-4 text-blue-200 select-none">Contoh Struktur HTML dengan List</h3>
+      <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="id"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Daftar Buah&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Daftar Buah&lt;/h1&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Apel&lt;/li&gt;
+      &lt;li&gt;Pisang&lt;/li&gt;
+      &lt;li&gt;Mangga&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+
+    <div>
+      <h3 class="font-semibold text-3xl mb-4 text-blue-200 select-none">Contoh Struktur HTML dengan Form</h3>
+      <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="id"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Form Kontak&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Form Kontak&lt;/h1&gt;
+    &lt;form&gt;
+      &lt;label for="nama"&gt;Nama:&lt;/label&gt;
+      &lt;input type="text" id="nama" name="nama"&gt;&lt;br&gt;
+      &lt;label for="email"&gt;Email:&lt;/label&gt;
+      &lt;input type="email" id="email" name="email"&gt;&lt;br&gt;
+      &lt;button type="submit"&gt;Kirim&lt;/button&gt;
+    &lt;/form&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+
+    <div>
+      <h3 class="font-semibold text-3xl mb-4 text-blue-200 select-none">Contoh Struktur HTML dengan Tabel</h3>
+      <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="id"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Data Siswa&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Data Siswa&lt;/h1&gt;
+    &lt;table border="1"&gt;
+      &lt;tr&gt;&lt;th&gt;Nama&lt;/th&gt;&lt;th&gt;Umur&lt;/th&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;td&gt;Budi&lt;/td&gt;&lt;td&gt;15&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;td&gt;Siti&lt;/td&gt;&lt;td&gt;16&lt;/td&gt;&lt;/tr&gt;
+    &lt;/table&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+  </section>
+
+  <div class="text-center mb-24 px-4">
+    <button id="open-website-btn" class="btn-primary select-none" aria-label="Buka Website">
+      ← Kembali ke Beranda
+    </button>
+  </div>
+
+  <div id="modal" class="fixed inset-0 flex items-center justify-center modal-backdrop hidden z-50" role="dialog"
+    aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-desc">
+    <div class="modal-content relative" tabindex="0">
+      <button aria-label="Tutup Modal" id="modal-close" class="absolute top-3 right-3 btn-close w-7 h-7"
+        title="Tutup">&times;</button>
+      <h2 id="modal-title" class="modal-title mb-4"></h2>
+      <p id="modal-desc" class="mb-6"></p>
+      <button id="modal-ok" class="btn-primary">OK</button>
+    </div>
+  </div>
+
+  <div id="welcomeModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden"
+    role="dialog" aria-modal="true" aria-labelledby="welcomeTitle" aria-describedby="welcomeDesc">
+    <div class="bg-white rounded-lg shadow-lg max-w-md w-full p-6 mx-4">
+      <h3 id="welcomeTitle" class="text-black font-semibold mb-2">Selamat Datang di Dunia WebDev!</h3>
+      <p id="welcomeDesc" class="text-black mb-4">Mulai perjalananmu belajar web development dengan semangat!</p>
+      <button id="closeWelcomeModal" type="button"
+        class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        aria-label="Tutup popup selamat datang">
+        Mulai Sekarang
+      </button>
+    </div>
+  </div>
+  <footer class="animated-footer-border">
+    <p class="animated-footer-text">&copy; 2025 Belajar Web Development oleh <a href="#"
+        aria-label="TechBloom website">TechBloom</a>. Semua Hak Dilindungi.</p>
+    <p>Didukung oleh teknologi modern dan semangat belajar.</p>
+  </footer>
+
+  <script src="../js/webdev.js"></script>
+</body>
+
+</html>

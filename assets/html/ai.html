@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+<!-- TECHBLOOM BY HASAN -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Belajar Artificial Intelligence</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../css/ai.css">
+</head>
+
+<body class="bg-gradient-to-br from-gray-900 to-black text-white font-sans relative min-h-screen">
+
+
+  <div
+    class="absolute inset-0 z-0 pointer-events-none bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-indigo-700 via-black to-transparent opacity-30 blur-2xl animate-pulse">
+  </div>
+
+  <header class="relative z-10 text-center pt-16 px-6">
+    <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Artificial Intelligence</h1>
+    <p class="text-lg max-w-xl mx-auto mb-8">Pelajari teknologi AI dan cara kerjanya untuk membangun aplikasi cerdas di
+      masa depan.</p>
+    <img src="../images/gambar-ai.jpg" alt="Gambar AI"
+      class="w-64 h-auto mx-auto rounded-xl shadow-lg border-4 border-indigo-600">
+  </header>
+  <section class="relative z-10 max-w-4xl mx-auto px-6 py-12">
+    <h2 class="text-2xl font-bold mb-4 text-indigo-400">Apa itu Artificial Intelligence?</h2>
+    <p class="text-gray-200 leading-relaxed">
+      <strong>Artificial Intelligence (AI)</strong> merupakan cabang ilmu komputer yang berfokus pada pengembangan
+      sistem cerdas yang mampu meniru berbagai perilaku manusia, seperti berpikir, belajar, mengenali gambar, memahami
+      bahasa, serta mengambil keputusan secara mandiri. Teknologi AI telah diterapkan secara luas di berbagai bidang,
+      mulai dari asisten virtual dan kendaraan otonom hingga analisis data besar, membuka peluang inovasi untuk masa
+      depan yang lebih cerdas dan efisien.
+    </p>
+  </section>
+  <section class="relative z-10 max-w-6xl mx-auto px-6 py-10">
+    <h2 class="text-2xl font-bold mb-6 text-indigo-400">Modul Belajar AI</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div
+        onclick="showModal('Machine Learning', 'Machine Learning merupakan salah satu cabang dari kecerdasan buatan (AI) yang memungkinkan komputer untuk belajar dari data guna menghasilkan prediksi atau mengambil keputusan secara otomatis. Teknologi ini telah diaplikasikan secara luas, misalnya pada sistem rekomendasi video, deteksi spam email, serta prediksi harga properti. Machine Learning memanfaatkan berbagai algoritma canggih, mulai dari regresi, pohon keputusan (decision tree), hingga deep learning, yang terus mendorong inovasi di berbagai bidang..')"
+        class="bg-indigo-800/50 p-6 rounded-xl shadow hover:scale-105 transition cursor-pointer">
+        <h3 class="text-xl font-semibold mb-2">Machine Learning</h3>
+        <p>Pelajari bagaimana teknologi Machine Learning memungkinkan sistem untuk belajar dari data dan meningkatkan
+          akurasinya secara mandiri..</p>
+      </div>
+      <div
+        onclick="showModal('Computer Vision', 'Computer Vision adalah cabang dari kecerdasan buatan (AI) yang berfokus pada kemampuan komputer untuk memahami dan menginterpretasikan gambar maupun video, serupa dengan cara kerja mata manusia. Teknologi ini diterapkan dalam berbagai inovasi, seperti pengenalan wajah, kendaraan otonom (self-driving car), serta deteksi objek secara real-time. Salah satu teknik utama dalam bidang ini adalah Convolutional Neural Network (CNN), yang terus mengembangkan kemampuan komputer dalam mengenali pola visual dengan akurasi tinggi..')"
+        class="bg-indigo-800/50 p-6 rounded-xl shadow hover:scale-105 transition cursor-pointer">
+        <h3 class="text-xl font-semibold mb-2">Computer Vision</h3>
+        <p>Pelajari bagaimana teknologi Computer Vision memungkinkan komputer memahami dan mengenali gambar serta video
+          layaknya mata manusia...</p>
+      </div>
+      <div
+        onclick="showModal('Natural Language Processing (NLP)', 'Natural Language Processing (NLP) merupakan cabang dari kecerdasan buatan yang memungkinkan komputer untuk memahami, menghasilkan, dan merespons bahasa manusia dalam bentuk teks maupun suara. Teknologi ini telah menjadi dasar bagi berbagai aplikasi inovatif, seperti chatbot, penerjemah bahasa otomatis, serta asisten virtual populer seperti Siri dan ChatGPT. NLP memanfaatkan model-model canggih seperti Recurrent Neural Networks (RNN), BERT, dan GPT untuk meningkatkan kemampuan interaksi manusia-komputer secara signifikan..')"
+        class="bg-indigo-800/50 p-6 rounded-xl shadow hover:scale-105 transition cursor-pointer">
+        <h3 class="text-xl font-semibold mb-2">Natural Language Processing (NLP)</h3>
+        <p>Pelajari bagaimana Natural Language Processing (NLP) memungkinkan komputer memahami, menghasilkan, dan
+          merespons bahasa manusia dalam bentuk teks maupun suara..</p>
+      </div>
+    </div>
+  </section>
+  <div id="aiModal" class="fixed inset-0 bg-black/70 flex items-center justify-center z-50 hidden">
+    <div class="bg-white text-black max-w-2xl w-full p-6 rounded-xl relative shadow-xl">
+      <button onclick="closeModal()" class="absolute top-2 right-4 text-red-500 text-xl font-bold"
+        aria-label="Tutup Modal">&times;</button>
+      <h3 id="modalTitle" class="text-2xl font-bold text-indigo-700 mb-4"></h3>
+      <p id="modalContent" class="text-gray-800 leading-relaxed whitespace-pre-line"></p>
+    </div>
+  </div>
+
+  <section class="relative z-10 max-w-4xl mx-auto px-6 py-10">
+    <h2 class="text-2xl font-bold mb-4 text-indigo-400">Simulasi Kode AI (Python)</h2>
+    <div class="bg-black border border-indigo-700 rounded-xl p-4 text-green-400 font-mono overflow-x-auto mb-6">
+      <pre>
+# Contoh Machine Learning sederhana
+from sklearn.linear_model import LinearRegression
+
+X = [[1], [2], [3], [4]]
+y = [2, 4, 6, 8]
+
+model = LinearRegression()
+model.fit(X, y)
+
+print(model.predict([[5]]))  # Output: [10.]
+    </pre>
+    </div>
+    <div class="bg-black border border-purple-700 rounded-xl p-4 text-green-400 font-mono overflow-x-auto mb-6">
+      <pre>
+# Contoh NLP dengan TextBlob
+from textblob import TextBlob
+
+kalimat = "Saya sangat senang belajar AI!"
+analisis = TextBlob(kalimat)
+
+print(analisis.sentiment)  # Polarity dan Subjectivity
+    </pre>
+    </div>
+    <div class="bg-black border border-pink-700 rounded-xl p-4 text-green-400 font-mono overflow-x-auto mb-6">
+      <pre>
+# Contoh Chatbot Sederhana
+user_input = input("Ketik sesuatu: ")
+
+if "hai" in user_input.lower():
+    print("Halo juga! Apa kabar?")
+else:
+    print("Maaf, saya tidak mengerti.")
+    </pre>
+    </div>
+
+    <div class="bg-black border border-yellow-700 rounded-xl p-4 text-green-400 font-mono overflow-x-auto mb-6">
+      <pre>
+# Prediksi nilai menggunakan rumus AI
+def prediksi_nilai(jam_belajar):
+    return jam_belajar * 2 + 3
+
+print("Prediksi nilai:", prediksi_nilai(5))  # Output: 13
+    </pre>
+    </div>
+  </section>
+
+  <div id="welcome-modal"
+    class="fixed inset-0 bg-black bg-opacity-70 backdrop-blur-sm flex items-center justify-center z-50 hidden">
+    <div
+      class="bg-white dark:bg-gray-800 text-black dark:text-white p-8 rounded-2xl shadow-2xl max-w-lg w-full text-center transform transition-all scale-90 opacity-0 modal-box">
+      <h2 class="text-2xl font-bold mb-3">Selamat Datang di Dunia Artificial Intelligence!</h2>
+      <p class="mb-6">Jelajahi dunia AI dan bangun masa depanmu.</p>
+      <button onclick="closeWelcome()"
+        class="bg-indigo-700 hover:bg-indigo-800 text-white px-4 py-2 rounded shadow transition">
+        Mulai Sekarang
+      </button>
+    </div>
+  </div>
+  <div class="relative z-10 max-w-4xl mx-auto px-6 pb-16 text-center">
+    <a href="../../dashboard.html"
+      class="inline-block bg-indigo-700 hover:bg-indigo-800 text-white font-semibold py-3 px-6 rounded-xl shadow-lg transition duration-300">
+      ← Kembali ke Beranda
+    </a>
+  </div>
+
+  <footer
+    class="relative z-10 text-center py-8 border-t border-indigo-700 mt-10 bg-gradient-to-r from-black to-indigo-900">
+    <p class="text-indigo-400">&copy; 2025 Belajar Artificial Intelligence oleh TechBloom. Semua Hak Dilindungi.</p>
+    <p class="text-sm text-indigo-300 mt-1">Didukung oleh teknologi modern dan semangat belajar.</p>
+  </footer>
+  <script src="../js/ai.js"></script>
+</body>
+
+</html>

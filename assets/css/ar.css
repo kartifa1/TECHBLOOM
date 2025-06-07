@@ -1,0 +1,10 @@
+
+/* ===== CUSTOM CSS by Hasan ~ TECHBLOOM ===== */
+.modal-box {
+      transition: all 0.3s ease;
+    }
+    .game-object {
+      top: 20%;
+      left: 50%;
+      transition: top 0.4s ease, left 0.4s ease;
+    }

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+<!-- TECHBLOOM BY HASAN -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cloud Computing - Grow The Future With Code</title>
+  <link rel="stylesheet" href="../css/cloud.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="bg-gradient-to-br from-blue-900 to-gray-900 text-white font-sans relative min-h-screen overflow-x-hidden">
+
+  <div
+    class="absolute inset-0 z-0 pointer-events-none bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-sky-500 via-transparent to-transparent opacity-20 blur-2xl animate-pulse">
+  </div>
+
+
+  <div id="welcome-modal"
+    class="fixed inset-0 bg-black bg-opacity-70 backdrop-blur-sm flex items-center justify-center z-50 hidden">
+    <div
+      class="bg-white text-black p-8 rounded-2xl shadow-2xl max-w-lg w-full text-center transform transition-all scale-90 opacity-0 modal-box">
+      <h2 class="text-2xl font-bold mb-3">Selamat Datang di Dunia Cloud!</h2>
+      <p class="mb-6">Pelajari konsep Cloud Computing yang menjadi fondasi teknologi masa depan.</p>
+      <button onclick="closeWelcome()"
+        class="bg-sky-700 hover:bg-sky-800 text-white px-4 py-2 rounded shadow transition">Mulai Sekarang</button>
+    </div>
+  </div>
+
+
+  <header class="relative z-10 text-center pt-16 px-6">
+    <h1 class="text-4xl md:text-5xl font-extrabold mb-4 text-sky-400">Cloud Computing </h1>
+    <p class="text-lg max-w-xl mx-auto mb-8 text-gray-300">Teknologi yang memungkinkan akses data dan aplikasi melalui
+      internet kapan saja dan di mana saja.</p>
+    <img src="../images/cloud-visual.jpg" alt="Cloud Computing"
+      class="w-64 h-auto mx-auto rounded-xl shadow-lg border-4 border-sky-600">
+  </header>
+
+
+  <section class="relative z-10 max-w-5xl mx-auto px-6 py-10 text-center">
+    <h2 class="text-2xl font-bold mb-4 text-sky-400">Diagram Cloud Interaktif</h2>
+    <div class="relative w-full h-64">
+      <img src="../images/cloud-diagram.png" alt="Diagram Cloud"
+        class="absolute inset-0 w-full h-full object-contain cloud-diagram">
+    </div>
+  </section>
+
+
+  <section class="relative z-10 max-w-6xl mx-auto px-6 py-10">
+    <h2 class="text-2xl font-bold mb-6 text-sky-400">Modul Cloud Computing</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div
+        onclick="showModal('Layanan IaaS', 'Infrastructure as a Service (IaaS) merupakan layanan cloud computing yang menyediakan infrastruktur komputasi dasar secara virtual melalui internet. Pengguna dapat menyewa sumber daya seperti server, penyimpanan data, jaringan, dan kapasitas pemrosesan tanpa harus memiliki perangkat keras fisik secara langsung. Dengan IaaS, perusahaan dan pengembang dapat mengatur serta mengelola infrastruktur sesuai kebutuhan secara fleksibel, tanpa investasi awal yang besar. Layanan ini sangat bermanfaat untuk bisnis yang membutuhkan skalabilitas cepat, pengujian sistem, pengembangan aplikasi, serta penyimpanan data cadangan. Contoh populer penyedia IaaS adalah Amazon Web Services (AWS), Microsoft Azure, dan Google Cloud Platform (GCP)..')"
+        class="bg-sky-800/50 p-6 rounded-xl shadow hover:scale-105 transition cursor-pointer">
+        <h3 class="text-xl font-semibold mb-2">Infrastructure as a Service (IaaS)</h3>
+        <p>Menyediakan infrastruktur digital seperti server dan penyimpanan yang dapat disewa tanpa perlu membeli
+          perangkat keras..</p>
+      </div>
+      <div
+        onclick="showModal('Platform as a Service', 'Platform as a Service (PaaS) adalah layanan cloud yang menyediakan platform lengkap untuk pengembangan, pengujian, dan penyebaran aplikasi tanpa perlu mengelola infrastruktur fisik atau virtual. PaaS memberikan pengguna akses ke lingkungan pengembangan yang sudah terkonfigurasi dengan berbagai tools, database, middleware, serta layanan tambahan yang mendukung siklus hidup aplikasi secara menyeluruh. Hal ini memungkinkan developer fokus pada penulisan kode dan inovasi, tanpa harus memikirkan pengaturan server, jaringan, atau keamanan. PaaS banyak digunakan untuk mempercepat pengembangan aplikasi web dan mobile, serta integrasi layanan pihak ketiga. Contoh layanan PaaS yang populer meliputi Heroku, Google App Engine, dan Microsoft Azure App Services..')"
+        class="bg-sky-800/50 p-6 rounded-xl shadow hover:scale-105 transition cursor-pointer">
+        <h3 class="text-xl font-semibold mb-2">Platform as a Service (PaaS)</h3>
+        <p>Layanan yang memungkinkan pengembangan dan pengelolaan aplikasi langsung di cloud tanpa mengurus
+          infrastruktur dasar..</p>
+      </div>
+      <div
+        onclick="showModal('Software as a Service', 'Software as a Service (SaaS) merupakan model penyampaian aplikasi di mana software di-hosting di cloud dan dapat diakses oleh pengguna melalui internet menggunakan browser web. Dengan SaaS, pengguna tidak perlu melakukan instalasi, pemeliharaan, atau pembaruan perangkat lunak secara manual, karena semua itu dikelola oleh penyedia layanan. Model ini memudahkan aksesibilitas aplikasi dari berbagai perangkat dan lokasi, mendukung kolaborasi secara real-time, serta mengurangi biaya operasional TI bagi organisasi. SaaS sangat populer untuk aplikasi seperti email (Gmail, Outlook), pengolah dokumen (Google Docs, Microsoft 365), platform CRM, dan sistem manajemen proyek. Keunggulan SaaS adalah kemudahan penggunaan, skalabilitas, serta integrasi dengan layanan lain di cloud..')"
+        class="bg-sky-800/50 p-6 rounded-xl shadow hover:scale-105 transition cursor-pointer">
+        <h3 class="text-xl font-semibold mb-2">Software as a Service (SaaS)</h3>
+        <p>Aplikasi siap pakai yang dapat diakses melalui internet tanpa perlu instalasi di perangkat pengguna.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="relative z-10 max-w-4xl mx-auto px-6 py-10">
+    <h2 class="text-2xl font-bold mb-4 text-sky-400">Simulasi Kode Cloud (Python)</h2>
+    <div class="bg-black border border-sky-600 rounded-xl p-4 text-sky-400 font-mono overflow-x-auto mb-6">
+      <pre># Upload file ke cloud (simulasi AWS S3)
+import boto3
+
+s3 = boto3.client('s3')
+s3.upload_file('local_file.txt', 'my-bucket', 'cloud_file.txt')
+print("File berhasil diunggah!")</pre>
+    </div>
+  </section>
+
+
+  <div id="cloudModal" class="fixed inset-0 bg-black/70 flex items-center justify-center z-50 hidden">
+    <div class="bg-white text-black max-w-2xl w-full p-6 rounded-xl relative shadow-xl">
+      <button onclick="closeModal()" class="absolute top-2 right-4 text-red-500 text-xl font-bold">&times;</button>
+      <h3 id="modalTitle" class="text-2xl font-bold text-sky-700 mb-4"></h3>
+      <p id="modalContent" class="text-gray-800 leading-relaxed whitespace-pre-line"></p>
+    </div>
+  </div>
+
+
+  <div class="relative z-20 flex justify-center mt-12 mb-10">
+    <a href="../../dashboard.html"
+      class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-sky-600 to-indigo-700 text-white font-semibold text-lg rounded-full shadow-lg hover:scale-105 hover:shadow-2xl transition-all duration-300">
+      ← Kembali ke Beranda
+    </a>
+  </div>
+  <footer class="relative z-10 text-center text-white py-8 bg-gradient-to-r from-blue-900 via-indigo-900 to-blue-900">
+    <p class="hover:underline">
+      &copy; 2025 Belajar UI / UX Design oleh
+      <a href="#" aria-label="TechBloom website" class="text-sky-400 hover:text-sky-200">TechBloom</a>. Semua Hak
+      Dilindungi.
+    </p>
+    <p class="text-sm text-sky-300 mt-1">
+      Didukung oleh teknologi modern dan semangat belajar.
+    </p>
+  </footer>
+  <script src="../js/cloud.js"></script>
+
+</body>
+
+</html>

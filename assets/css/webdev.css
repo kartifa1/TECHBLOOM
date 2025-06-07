@@ -1,0 +1,237 @@
+
+/* ===== CUSTOM CSS by Hasan ~ TECHBLOOM ===== */
+body {
+    background: linear-gradient(135deg, #0a2342, #1c3f66, #4178a4);
+    color: #e0e6f0;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+    animation: fadeInBody 1.2s ease forwards;
+    opacity: 0;
+}
+
+@keyframes fadeInBody {
+    to {
+        opacity: 1;
+    }
+}
+
+header {
+    animation: fadeInUp 1s ease forwards;
+    opacity: 0;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+}
+
+.modal-backdrop {
+    background-color: rgba(15, 32, 72, 0.8);
+    backdrop-filter: blur(4px);
+}
+
+.modal-content {
+    background-color: #0f2048;
+    color: #d0d7f1;
+    border-radius: 1rem;
+    border: 2px solid #3a80ff;
+    box-shadow: 0 0 25px #3a80ffaa;
+    transition: all 0.4s ease;
+    max-width: 28rem;
+    padding: 1.5rem 2rem;
+}
+
+.modal-title {
+    font-weight: 700;
+    text-shadow: 0 0 6px #3a80ffcc;
+    font-size: 1.5rem;
+}
+
+.btn-close {
+    filter: invert(1);
+    opacity: 0.85;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-close:hover {
+    opacity: 1;
+}
+
+.btn-primary {
+    background-color: #3a80ff;
+    border-color: #3a80ff;
+    font-weight: 600;
+    padding: 0.6rem 1.8rem;
+    border-radius: 9999px;
+    box-shadow: 0 0 20px #3a80ffcc;
+    transition: background-color 0.3s ease;
+    color: white;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+.btn-primary:hover {
+    background-color: #5a9bff;
+    border-color: #5a9bff;
+}
+
+header img {
+    max-width: 420px;
+    width: 90%;
+    border-radius: 1rem;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    margin: 0 auto;
+    display: block;
+}
+
+header img:hover {
+    transform: scale(1.05) rotate(1deg);
+    box-shadow: 0 20px 40px rgba(0, 123, 255, 0.8);
+}
+
+.card {
+    background: #14355f;
+    border-radius: 1rem;
+    box-shadow: 0 8px 20px rgba(10, 36, 77, 0.6);
+    transition: transform 0.3s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+    color: #cfd8e3;
+    animation: fadeInUp 1.5s ease forwards;
+    opacity: 0;
+}
+
+.card:hover,
+.card:focus-visible {
+    transform: scale(1.08);
+    box-shadow: 0 0 20px #3a88ffcc, 0 0 30px #3a88ffcc;
+    color: #e9f0ff;
+    outline: none;
+}
+
+.card-title {
+    font-weight: 800;
+    font-size: 1.5rem;
+    margin-bottom: 0.6rem;
+    text-shadow: 0 0 10px #4a90e2;
+}
+
+.card-text {
+    font-size: 1.1rem;
+    line-height: 1.4;
+    color: #bfcde7cc;
+}
+
+/* Simulasi kode box */
+pre {
+    background: #102c5a;
+    border-radius: 1rem;
+    padding: 1rem 1.25rem;
+    box-shadow: 0 6px 15px rgba(10, 36, 77, 0.8);
+    font-size: 1rem;
+    color: #d6dbf5;
+    overflow-x: auto;
+    font-family: 'Fira Code', monospace, monospace;
+    user-select: text;
+    margin-bottom: 1.5rem;
+}
+
+/* Welcome modal */
+.welcome-modal .modal-content {
+    background: linear-gradient(135deg, #2756a0, #0a2f64);
+    color: #f0f4ff;
+    text-align: center;
+    border-radius: 1.5rem;
+    padding: 2.5rem 3rem;
+    box-shadow: 0 0 40px #4a90e2aa;
+    animation: zoomIn 0.7s ease forwards;
+    max-width: 28rem;
+    margin: 0 auto;
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+@keyframes colorShift {
+
+    0%,
+    100% {
+        color: #4178a4;
+        border-color: #1c3f66;
+    }
+
+    50% {
+        color: #a3c1e0;
+        border-color: #0a2342;
+    }
+}
+
+footer {
+    background-color: #0a2342;
+    padding: 2rem 1rem;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    letter-spacing: 0.03em;
+    border-top: 3px solid #1c3f66;
+    box-shadow: 0 -3px 12px rgba(10, 35, 66, 0.4);
+    user-select: none;
+    color: #cfd8e9;
+}
+
+footer .animated-footer-text {
+    animation: colorShift 6s ease-in-out infinite;
+    font-weight: 600;
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+footer .animated-footer-border {
+    border-top-width: 3px;
+    border-style: solid;
+    animation: colorShift 6s ease-in-out infinite;
+}
+
+footer p:last-child {
+    font-size: 0.9rem;
+    color: #a3b1c4;
+    font-weight: 300;
+    letter-spacing: 0.02em;
+}
+
+footer a {
+    color: #4178a4;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+footer a:hover,
+footer a:focus {
+    color: #a3c1e0;
+    text-decoration: underline;
+    outline: none;
+}
