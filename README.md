@@ -91,7 +91,7 @@ Proyek ini dibuat sama **Hasan** buat lomba **UKM Cyber Design Competition (UCDC
 
 ## Tema Lomba
 
-**UCDC 2025 - Grow the Future with Code**  
+**UCDC 2025 - Grow Up the Future with Code**  
 Subtema: **Pendidikan Teknologi**
 ## Screenshot Website
 <p align="center">
